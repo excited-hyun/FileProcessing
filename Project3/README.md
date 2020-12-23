@@ -11,8 +11,7 @@
 사용자에게서 key 를 int 형으로 입력 받고 입력받은 key 값에 해당하는 아스키값을 갖는 character 로 변경시킨뒤 이를 활용하여 BTree 의 Search 메소드를 호출하여 검색을 수행한다. 즉 위에 언급한 방식과 같은 형식으로 수행된다.
 
 ### 3)삽입
-삽입 과정은 purchase.cpp 의 insertPurchase() 메소드에 구현하였다. (line 403~468)
-기존의 프로젝트에서와 동일하게 purchaseID 를 입력 받고 존재하지 않는 id 인 경우에만 삽입을 수행한다. 
+삽입 과정은 purchase.cpp 의 insertPurchase() 메소드에 구현하였다. (line 403~468) 기존의 프로젝트에서와 동일하게 purchaseID 를 입력 받고 존재하지 않는 id 인 경우에만 삽입을 수행한다. 
 존재하지 않는 경우 Game ID, memberID, purchaseDate 를 순서대로 입력 받고 key 의 경우엔 기존에 존재하던 인덱스의 다음 번호를 넣어준다. 이때 key 는 1~127 사이의 값을 벗어나서는 안된다.
 그런 뒤 File Write 함수를 통해 fileOfPurchase.dat 파일의 내용을 수정해 주고 반환 값으로 받은 레코드의 주소 값을 활용하여 BTree 의 Insert 메소드를 호출하여 key 의 값과 레코드 주소를 저장해준다.
 
