@@ -1,4 +1,4 @@
-# 2020-2 File-Processing
+# 2020-2 File Processing
 CSE4095-01
 
 ## Prj1
